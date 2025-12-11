@@ -1,0 +1,145 @@
+/* Hand-Drawn Christmas Chaos Theme */
+
+:root {
+  --primary: #D32F2F;
+  --secondary: #1B5E20;
+  --cream: #FFFDE7;
+  --text-black: #212121;
+}
+
+/* Paper Grain Noise Texture */
+.bg-paper-grain {
+  background-color: var(--cream);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.1'/%3E%3C/svg%3E");
+}
+
+/* Cookie Shape Border Radius */
+.cookie-shape {
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+}
+
+/* Hand-Drawn Border Effect */
+.hand-drawn-border {
+  border: 3px solid var(--text-black);
+  box-shadow: 2px 3px 0px rgba(0,0,0,0.1);
+}
+
+/* Updated Cookie Card Style to match button exactly */
+.cookie-card {
+  /* Default background (can be overridden in HTML) */
+  background-color: #8D6E63;
+  padding: 2rem;
+  
+  /* Use the exact same border and shape as the button */
+  border: 3px solid var(--text-black);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
+  
+  /* Hard drop shadow */
+  box-shadow: 4px 4px 0px rgba(0,0,0,1);
+  
+  /* Transition for interaction */
+  transition: all 0.2s ease-in-out;
+  
+  /* Slight rotation for chaos */
+  transform: rotate(-1deg);
+}
+
+/* Interactive States */
+.cookie-card:hover {
+  /* Press effect: shadow gets smaller */
+  box-shadow: 2px 2px 0px rgba(0,0,0,1);
+  animation: jiggle 0.3s ease-in-out infinite;
+}
+
+.cookie-card:active {
+  /* Click effect: shadow disappears and element moves down */
+  box-shadow: 0px 0px 0px rgba(0,0,0,0);
+  transform: rotate(-1deg) translateY(4px);
+}
+
+/* Jiggle Animation */
+@keyframes jiggle {
+  0% { transform: rotate(-1deg); }
+  25% { transform: rotate(2deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(-4deg); }
+  100% { transform: rotate(-1deg); }
+}
+
+.hover-jiggle:hover {
+  animation: jiggle 0.3s ease-in-out infinite;
+}
+
+/* Snow Animation */
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: #FFF;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+  user-select: none;
+  cursor: default;
+  animation-name: snowflakes-fall, snowflakes-shake;
+  animation-duration: 10s, 3s;
+  animation-timing-function: linear, ease-in-out;
+  animation-iteration-count: infinite, infinite;
+  animation-play-state: running, running;
+}
+
+@keyframes snowflakes-fall {
+  0% { top: -10%; }
+  100% { top: 100%; }
+}
+
+@keyframes snowflakes-shake {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(80px); }
+}
+
+.snowflake:nth-of-type(0) { left: 1%; animation-delay: 0s, 0s; }
+.snowflake:nth-of-type(1) { left: 10%; animation-delay: 1s, 1s; }
+.snowflake:nth-of-type(2) { left: 20%; animation-delay: 6s, .5s; }
+.snowflake:nth-of-type(3) { left: 30%; animation-delay: 4s, 2s; }
+.snowflake:nth-of-type(4) { left: 40%; animation-delay: 2s, 2s; }
+.snowflake:nth-of-type(5) { left: 50%; animation-delay: 8s, 3s; }
+.snowflake:nth-of-type(6) { left: 60%; animation-delay: 6s, 2s; }
+.snowflake:nth-of-type(7) { left: 70%; animation-delay: 2.5s, 1s; }
+.snowflake:nth-of-type(8) { left: 80%; animation-delay: 1s, 0s; }
+.snowflake:nth-of-type(9) { left: 90%; animation-delay: 3s, 1.5s; }
+
+/* Santa Belt Nav */
+.santa-belt {
+  background: var(--secondary);
+  border-top: 4px solid #000;
+}
+
+.belt-buckle {
+  background: #000;
+  border: 4px solid #FFD700;
+  border-radius: 8px;
+  position: relative;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.belt-buckle::after {
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 20px;
+  background: #FFD700;
+}

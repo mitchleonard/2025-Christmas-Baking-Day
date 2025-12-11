@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annual Christmas Baking Day</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mountains+of+Christmas:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles (Defines Variables) -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: 'var(--primary)',
+                        secondary: 'var(--secondary)',
+                        cream: 'var(--cream)',
+                        black: 'var(--text-black)',
+                    },
+                    fontFamily: {
+                        display: ['"Mountains of Christmas"', 'cursive'],
+                        body: ['"Patrick Hand"', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-paper-grain text-black font-body overflow-x-hidden relative pb-24 text-lg">
+
+    <!-- Snow Overlay -->
+    <div class="snow-container" aria-hidden="true">
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+        <div class="snowflake">❅</div>
+        <div class="snowflake">❆</div>
+        <div class="snowflake">❄</div>
+    </div>
+
+    <!-- Hero Section -->
+    <header id="top" class="min-h-screen flex flex-col items-center justify-center p-4 relative text-center">
+        <div class="w-full max-w-4xl mx-auto flex flex-col items-center gap-8">
+            <!-- Chef Santa -->
+            <div class="transform hover:scale-105 transition-transform duration-300">
+                <picture>
+                  <source srcset="images/santa_no_bg_optimized.webp" type="image/webp">
+                  <img src="images/santa_no_bg_optimized.png"
+                       alt="Santa illustration"
+                       loading="lazy"
+                       decoding="async"
+                       class="h-64 w-auto">
+                </picture>
+            </div>
+
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-primary drop-shadow-sm">
+                Annual Christmas<br>Baking Day
+            </h1>
+            
+            <p class="text-xl md:text-2xl max-w-lg mx-auto leading-relaxed">
+                Join us for a day of flour, frosting, and festive chaos!
+            </p>
+
+            <a href="#details" class="cookie-shape bg-secondary text-white text-xl px-8 py-4 font-bold border-[3px] border-black hover-jiggle shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] inline-flex items-center justify-center min-w-[48px] min-h-[48px] transform transition-all active:translate-y-1 active:shadow-none">
+                Get the Details
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto px-4 space-y-20 mb-20">
+        
+        <!-- Event Details -->
+        <section id="details" class="scroll-mt-24">
+            <h2 class="font-display text-4xl text-primary mb-8 text-center border-b-4 border-black inline-block mx-auto px-6 pb-2">Event Details</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Location -->
+                <div class="col-span-1 md:col-span-2 cookie-card !bg-white">
+                    <h3 class="font-display text-2xl text-secondary mb-2">Where?</h3>
+                    <p class="text-xl">Our Apartment</p>
+                    <div class="mt-4 text-4xl text-center">🏠</div>
+                </div>
+                
+                <!-- Date -->
+                <div class="col-span-1 md:col-span-2 cookie-card !bg-white">
+                    <h3 class="font-display text-2xl text-secondary mb-2">When?</h3>
+                    <p class="text-xl">Saturday, December 20</p>
+                    <p class="text-black">Anytime after 10am</p>
+                    <div class="mt-4 text-4xl text-center">📅</div>
+                </div>
+                
+                <!-- Festive Gear -->
+                <div class="col-span-1 md:col-span-4 cookie-card !bg-white">
+                    <h3 class="font-display text-2xl text-secondary mb-2">What to Wear?</h3>
+                    <p class="text-xl">Festive gear encouraged! 🎄</p>
+                    <div class="mt-4 text-4xl text-center">🎅</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Food & Drinks -->
+        <section id="food" class="scroll-mt-24">
+            <h2 class="font-display text-4xl text-primary mb-8 text-center border-b-4 border-black inline-block mx-auto px-6 pb-2">Food & Drinks</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Main Meal -->
+                <div class="col-span-1 md:col-span-2 cookie-card !bg-white">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-4xl">🥪</span>
+                        <h3 class="font-display text-2xl text-black">The Main Event</h3>
+                    </div>
+                    <ul class="space-y-2 text-lg">
+                        <li>Shredded Pork & Beef Sandwiches</li>
+                    </ul>
+                </div>
+
+                <!-- Cocktails -->
+                <div class="col-span-1 md:col-span-2 cookie-card !bg-white">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-4xl">🍸</span>
+                        <h3 class="font-display text-2xl text-black">Festive Sips</h3>
+                    </div>
+                    <ul class="space-y-2 text-lg">
+                        <li>Special Christmas Cocktail</li>
+                    </ul>
+                </div>
+
+                <!-- Soft Drinks -->
+                <div class="col-span-1 md:col-span-2 cookie-card !bg-white">
+                    <div class="flex items-center gap-4 mb-4">
+                        <span class="text-4xl">🥤</span>
+                        <h3 class="font-display text-2xl text-black">Soft Drinks</h3>
+                    </div>
+                    <ul class="space-y-2 text-lg">
+                        <li>Water</li>
+                        <li>Diet Coke / Coke Zero</li>
+                    </ul>
+                </div>
+                
+                <!-- Note -->
+                <div class="col-span-1 md:col-span-2 cookie-card !bg-yellow-50 text-center flex items-center justify-center">
+                    <p class="text-lg italic">We'll have a couple side dishes but if you feel inclined to bring additional items, text to group chat so we can plan accordingly!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supplies -->
+        <section id="supplies" class="scroll-mt-24">
+            <h2 class="font-display text-4xl text-primary mb-2 text-center border-b-4 border-black inline-block mx-auto px-6 pb-2">We've Got You Covered</h2>
+            <p class="text-center text-lg mb-8">(Things we have in-house)</p>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <!-- Supply Items -->
+                <div class="cookie-card !bg-white !p-4 flex flex-col items-center justify-center"><span class="block text-3xl mb-2">🥣</span> Flour</div>
+                <div class="cookie-card !bg-white !p-4 flex flex-col items-center justify-center"><span class="block text-3xl mb-2">🧂</span> Sugar</div>
+                <div class="cookie-card !bg-white !p-4 flex flex-col items-center justify-center"><span class="block text-3xl mb-2">✨</span> Sprinkles</div>
+                <div class="cookie-card !bg-white !p-4 flex flex-col items-center justify-center"><span class="block text-3xl mb-2">✂️</span> Cookie Cutters</div>
+                <div class="cookie-card !bg-white !p-4 flex flex-col items-center justify-center"><span class="block text-3xl mb-2">📜</span> Parchment Paper</div>
+                <div class="cookie-card !bg-white !p-4 flex flex-col items-center justify-center"><span class="block text-3xl mb-2">🥄</span> Baking Sheets</div>
+            </div>
+            <p class="text-center text-2xl md:text-3xl font-display text-primary mt-8 mb-4">Let's get our bake on!</p>
+        </section>
+
+        <!-- Memories Gallery -->
+        <section id="memories" class="scroll-mt-24">
+            <h2 class="font-display text-4xl text-primary mb-8 text-center border-b-4 border-black inline-block mx-auto px-6 pb-2">Last Year's Chaos</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Image Grid -->
+                <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform rotate-1 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_1.jpeg" alt="Memory 1" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_2.jpeg" alt="Memory 2" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform rotate-2 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_3.JPG" alt="Memory 3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform -rotate-2 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_4.JPG" alt="Memory 4" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform rotate-1 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_5.JPG" alt="Memory 5" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_6.JPG" alt="Memory 6" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                 <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform rotate-1 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_7.JPG" alt="Memory 7" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                 <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform -rotate-1 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_8.JPG" alt="Memory 8" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+                 <div class="aspect-square bg-gray-200 hand-drawn-border rounded-lg overflow-hidden transform rotate-2 hover:rotate-0 transition-transform">
+                    <img src="images/ChristmasBakingDay2024_9.JPG" alt="Memory 9" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500">
+                </div>
+            </div>
+        </section>
+
+        <!-- COOKIE CATCHER FRENZY -->
+        <section id="cookie-catcher" class="max-w-xl mx-auto mt-16 mb-24 px-4">
+          <div class="cookie-card !bg-white !p-6 text-center hover:!animate-none hover:!shadow-[4px_4px_0px_rgba(0,0,0,1)] active:!transform-none active:!shadow-[4px_4px_0px_rgba(0,0,0,1)]">
+            <h2 class="font-display text-4xl text-primary mb-2">
+              Cookie Catcher Frenzy
+            </h2>
+            <p class="text-lg mb-4">
+              Drag the tray to catch the cookies. Avoid burnt ones. Miss too many and it’s game over!
+            </p>
+            <!-- HUD -->
+            <div class="flex items-center justify-between text-sm md:text-base mb-3">
+              <div class="flex gap-2 items-center">
+                <span class="font-display text-secondary">Score:</span>
+                <span id="cc-score" class="font-mono">0</span>
+              </div>
+              <div class="flex gap-2 items-center">
+                <span class="font-display text-secondary">Lives:</span>
+                <span id="cc-lives" class="font-mono">❤️❤️❤️</span>
+              </div>
+              <div class="hidden md:flex gap-2 items-center text-xs opacity-70">
+                <span>Tip:</span>
+                <span>Golden cookies = big points, burnt cookies = bad news.</span>
+              </div>
+            </div>
+            <!-- Canvas Wrapper -->
+            <div class="relative w-full max-w-full mx-auto border-4 border-black rounded-xl overflow-hidden bg-[#fef5e7]">
+              <canvas
+                id="cookie-catcher-canvas"
+                class="block w-full h-[340px] md:h-[420px] touch-pan-y"
+              ></canvas>
+              <!-- Start / Game Over Overlay -->
+              <div
+                id="cc-overlay"
+                class="absolute inset-0 flex flex-col items-center justify-center bg-black/50 text-cream px-4"
+              >
+                <p class="font-display text-2xl md:text-3xl mb-2">
+                  Ready to Catch?
+                </p>
+                <p class="mb-4 text-sm md:text-base">
+                  Move the tray with your finger or mouse. Catch yummy cookies, dodge burnt ones.
+                  The game starts slow, then ramps up fast after a few seconds.
+                </p>
+                <button
+                  id="cc-start-btn"
+                  class="cookie-shape bg-secondary text-white text-lg px-8 py-3 font-bold border-[3px] border-black hover-jiggle shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transform transition-all active:translate-y-1 active:shadow-none"
+                >
+                  Start Game
+                </button>
+              </div>
+              <!-- Game Over Message (hidden until needed) -->
+              <div
+                id="cc-gameover"
+                class="hidden absolute inset-0 flex flex-col items-center justify-center bg-black/70 text-cream px-4"
+              >
+                <p class="font-display text-3xl mb-2">
+                  Game Over!
+                </p>
+                <p class="mb-2 text-lg">
+                  Final Score: <span id="cc-final-score" class="font-mono">0</span>
+                </p>
+                <button
+                  id="cc-restart-btn"
+                  class="cookie-shape bg-secondary text-white text-lg px-8 py-3 font-bold border-[3px] border-black hover-jiggle shadow-[4px_4px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_rgba(0,0,0,1)] transform transition-all active:translate-y-1 active:shadow-none mt-2"
+                >
+                  Play Again
+                </button>
+              </div>
+            </div>
+            <p class="mt-3 text-xs text-black/60">
+              Starts gentle, then gets chaotic after a few seconds. How many cookies can you catch before the oven wins?
+            </p>
+          </div>
+        </section>
+
+    </main>
+
+    <!-- Sticky Bottom Nav (Santa Belt) -->
+    <nav class="fixed bottom-0 left-0 w-full h-20 santa-belt flex items-center justify-center z-50 shadow-2xl">
+        <div class="flex items-center justify-center gap-1 md:gap-8 text-cream font-display text-lg md:text-2xl px-2 w-full max-w-4xl">
+            <!-- Added min-h/min-w and padding for touch targets -->
+            <a href="#details" class="hover:text-primary transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center px-3">Details</a>
+            <a href="#food" class="hover:text-primary transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center px-3">Food</a>
+            
+            <!-- Belt Buckle / Santa Icon -->
+            <a href="#top" class="flex items-center justify-center mx-1 md:mx-4 hover:scale-110 hover:-rotate-12 transition-transform duration-300 min-h-[48px] min-w-[48px]" aria-label="Back to Top">
+                <picture>
+                  <source srcset="images/santa_no_bg_optimized.webp" type="image/webp">
+                  <img src="images/santa_no_bg_optimized.png"
+                       alt="Santa illustration"
+                       loading="lazy"
+                       decoding="async"
+                       class="h-12 w-auto"
+                       style="filter: brightness(0) invert(1);">
+                </picture>
+            </a>
+            
+            <a href="#supplies" class="hover:text-primary transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center px-3">Supplies</a>
+            <a href="#memories" class="hover:text-primary transition-colors min-h-[48px] min-w-[48px] flex items-center justify-center px-3">Photos</a>
+        </div>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
