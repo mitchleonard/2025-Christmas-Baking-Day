@@ -48,13 +48,18 @@
 .cookie-card:hover {
   /* Press effect: shadow gets smaller */
   box-shadow: 2px 2px 0px rgba(0,0,0,1);
-  animation: jiggle 0.3s ease-in-out infinite;
+  transform: rotate(0deg);
 }
 
 .cookie-card:active {
   /* Click effect: shadow disappears and element moves down */
   box-shadow: 0px 0px 0px rgba(0,0,0,0);
   transform: rotate(-1deg) translateY(4px);
+}
+
+/* Prevent jiggle on specific cookie-card elements */
+.cookie-card.no-jiggle:hover {
+  animation: none !important;
 }
 
 /* Jiggle Animation */
