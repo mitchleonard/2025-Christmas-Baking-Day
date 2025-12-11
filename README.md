@@ -6,7 +6,7 @@ A festive, mobile-first responsive website for the Annual Christmas Baking Day e
 
 - 🎄 **Hand-Drawn Christmas Theme**: Custom cookie-cutter borders, paper grain texture, and festive styling
 - ❄️ **Snow Animation**: CSS snowflakes falling across the entire page
-- 🎅 **Chef Santa**: Custom Santa illustration in hero and footer
+- 🎅 **Santa-First**: Santa illustration in hero and footer
 - 📱 **Mobile-First Design**: Fully responsive with Material Design grid logic
 - 🎮 **Cookie Catcher Frenzy**: Interactive mini-game to catch cookies
 - 📸 **Memory Gallery**: Photo gallery from last year's baking day
